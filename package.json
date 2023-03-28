@@ -1,0 +1,24 @@
+{
+  "name": "employee-tric-trac-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MariCods/Employee-Tric-Trac-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariCods/Employee-Tric-Trac-Tracker/issues"
+  },
+  "homepage": "https://github.com/MariCods/Employee-Tric-Trac-Tracker#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
