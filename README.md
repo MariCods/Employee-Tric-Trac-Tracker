@@ -37,6 +37,8 @@ Node, Sequelize, Mysql, Inquirer, Express, Console.Table
 [GitHub Repo]
 https://github.com/MariCods/Employee-Tric-Trac-Tracker
 
+[Video Link]
+https://drive.google.com/file/d/19ZWHY4v2JO5IisiOVbfe8_APkRMPH_3B/view
 # License
    
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://opensource.org/licenses/MIT)

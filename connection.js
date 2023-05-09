@@ -10,11 +10,6 @@ const db = mysql.createConnection(
 
 console.log(`Connected to the company_db database.`)
 
-
-
-// db.query('SELECT * FROM departments, SELECT * FROM employees', function (err, results){
-//     console.log(results)
-// });
 db.connect(err => {
     if (err) throw err
 }) 

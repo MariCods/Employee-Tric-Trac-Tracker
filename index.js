@@ -29,7 +29,7 @@ function updateEmployeeRole(employeeId, roleId) {
 }
 function viewAllRoles() {
   return db.promise().query(
-    "SELECT role.id, role.title, department.name AS department, role.salary FROM role LEFT JOIN department on role.department_id = department.id;"
+    "SELECT role.id, role.title, department.name AS department, role.salary FROM role LEFT JOIN department on role.departments_id = department.id;"
   );
 }
 // function removeEmployeeManager(managerid) {
@@ -81,10 +81,10 @@ function findAllEmployees() {
 }
 function viewIncome() {
   viewALLSalaries()
-  .then(([res]) => {
-    console.table(res)
-    questionPrompts()
-})
+    .then(([res]) => {
+      console.table(res)
+      questionPrompts()
+    })
 }
 
 function addEmployee() {
@@ -182,7 +182,8 @@ function updateStaffRole() {
               choices: roleChoices
             }
           ])
-            .then(({res}) => updateEmployeeRole(res.employeeId, res.roleId))
+            .then(( res ) => {console.log(res)
+              updateEmployeeRole(res.employeeId, res.roleId)})
             .then(() => console.log("Updated employee's role"))
             .then(() => questionPrompts())
         });
@@ -215,7 +216,7 @@ function questionPrompts() {
         },
         {
           name: "Update Employee Role",
-          value: " Update_Emp_Role"
+          value: "Update_Emp_Role"
         },
         {
           name: "Add Manager",
@@ -277,6 +278,7 @@ function questionPrompts() {
         removeEmployee();
         break;
       case "Update_Emp_Role":
+        console.log('update');
         updateStaffRole();
         break;
       case "Add_Manager":
